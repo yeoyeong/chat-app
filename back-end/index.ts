@@ -27,25 +27,4 @@ io.on("connection", (socket: any) => {
     //   socket.emit("chat history", messages); // 전체 데이터 전송
   });
 });
-
-// const cors = require("cors");
-// app.use(cors());
-
-// io.on("connection", function (socket: any) {
-//   // 소켓 연결
-//   socket.on("room", function (user_id: string) {
-//     // user_id가 room에 입장
-
-//     socket.join(user_id, () => {
-//       console.log(user_id + "방입장");
-//     });
-//   });
-//   console.log("a user connected");
-//   socket.on("send message", (messageobject: any) => {
-//     console.log(messageobject.name);
-//     console.log(messageobject.body);
-//     io.to(messageobject.name).emit("message", messageobject.body);
-//   });
-// });
-
 server.listen(port, () => console.log(`listening on port ${port}!`));
